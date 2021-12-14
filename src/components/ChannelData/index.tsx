@@ -24,11 +24,11 @@ const ChannelData: React.FC = () => {
                 />
                 ))}
                 <ChannelMessage
-                    author="Pietra"
+                    author="Jóbson"
                     date="13/12/2021"
                     content={
                         <>
-                            <Mention>@guii</Mention>, como faz pra ser lindo igual você?
+                            <Mention>@guii</Mention>, como faz pra programar com você?
                         </>
                     }
                     hasMention
