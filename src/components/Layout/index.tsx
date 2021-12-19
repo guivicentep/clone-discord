@@ -11,7 +11,7 @@ import UserList from '../UserList';
 import ChannelData from '../ChannelData';
 
 
-const Layout: React.FC = () => {
+export default function Layout() {
     return (
         <Grid>
             <ServerList />
@@ -25,5 +25,4 @@ const Layout: React.FC = () => {
     ) 
 };
 
-export default Layout;
 

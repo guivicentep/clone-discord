@@ -7,15 +7,12 @@ export interface Props {
     selected?: boolean;
 }
 
-const ChannelButton: React.FC<Props> = ({
-    channelName,
-    selected
-}) => {
+export default function ChannelButton(props: Props) {
     return (
-        <Container className={selected ? 'active' : ''}>
+        <Container className={props.selected ? 'active' : ''}>
             <div>
                 <HashtagIcon />
-                <span>{channelName}</span>
+                <span>{props.channelName}</span>
             </div>
             <div>
                 <InviteIcon />
@@ -24,6 +21,3 @@ const ChannelButton: React.FC<Props> = ({
         </Container>
     ) 
 };
-
-export default ChannelButton;
-

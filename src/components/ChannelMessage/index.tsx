@@ -11,30 +11,23 @@ export interface Props {
     isBot?: boolean;
 }
 
-const ChannelMessage: React.FC<Props> = ({
-    author,
-    date,
-    content,
-    hasMention,
-    isBot
-}) => {
+export default function ChannelMessage(props: Props){
     return (
-        <Container className={hasMention ? 'mention' : ''}>
-            <Avatar className={isBot ? 'bot' : ''}/>
+        <Container className={props.hasMention ? 'mention' : ''}>
+            <Avatar className={props.isBot ? 'bot' : ''}/>
 
             <Message>
                 <Header>
-                    <strong>{author}</strong>
+                    <strong>{props.author}</strong>
 
-                    {isBot && <span>Bot</span>}
+                    {props.isBot && <span>Bot</span>}
 
-                    <time>{date}</time>
+                    <time>{props.date}</time>
                 </Header>
-                <Content>{content}</Content>
+                <Content>{props.content}</Content>
             </Message>
         </Container>
     ) 
 };
 
-export default ChannelMessage;
 

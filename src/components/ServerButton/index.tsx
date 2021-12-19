@@ -11,21 +11,14 @@ export interface Props {
     mentions?: number;
 }
 
-const ServerButton: React.FC<Props> = ({
-    selected,
-    isHome,
-    hasNotifications, 
-    mentions
-}) => {
+export default function ServerButton(props: Props) {
   return (
       <Button
-        isHome={isHome}
-        hasNotifications={hasNotifications}
-        mentions={mentions}
-        className={selected ? 'active' : ''}>
-          {isHome && <img src={Logo} alt="Rocketseat" />}
+        isHome={props.isHome}
+        hasNotifications={props.hasNotifications}
+        mentions={props.mentions}
+        className={props.selected ? 'active' : ''}>
+          {props.isHome && <img src={Logo} alt="Rocketseat" />}
       </Button>
   )
 };
-
-export default ServerButton;

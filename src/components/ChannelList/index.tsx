@@ -4,7 +4,7 @@ import ChannelButton from '../ChannelButton';
 
 import { Container, Category, AddCategoryIcon } from './styles';
 
-const ChannelList: React.FC = () => {
+export default function ChannelList() {
     return (
         <Container>
             <Category>
@@ -20,6 +20,3 @@ const ChannelList: React.FC = () => {
         </Container>
     ) 
 };
-
-export default ChannelList;
-

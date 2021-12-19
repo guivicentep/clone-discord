@@ -4,7 +4,7 @@ import ServerButton from '../ServerButton';
 
 import { Container, Separator } from './styles';
 
-const ServerList: React.FC = () => {
+export default function ServerList() {
   return (
       <Container>
           <ServerButton isHome/>
@@ -25,5 +25,3 @@ const ServerList: React.FC = () => {
       </Container>
   )
 }
-
-export default ServerList;

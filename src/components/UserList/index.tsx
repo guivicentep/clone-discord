@@ -7,19 +7,19 @@ interface UserProps {
     isBot?: boolean;
 }
 
-const UserRow: React.FC<UserProps> = ({ nickname, isBot }) => {
+export function UserRow(props: UserProps) {
     return (
         <User>
-            <Avatar className={isBot ? 'bot' : ''}/>
+            <Avatar className={props.isBot ? 'bot' : ''}/>
 
-            <strong>{nickname}</strong>
+            <strong>{props.nickname}</strong>
 
-            {isBot && <span>Bot</span>}
+            {props.isBot && <span>Bot</span>}
         </User>
     )
 }
 
-const UserList: React.FC = () => {
+export default function UserList() {
     return (
         <Container>
             <Role>Disponível - 1</Role>
@@ -52,5 +52,4 @@ const UserList: React.FC = () => {
     ) 
 };
 
-export default UserList;
 

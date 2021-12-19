@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, HashtagIcon, Title, Separator, Description } from './styles';
 
-const ChannelInfo: React.FC = () => {
+export default function ChannelInfo() {
     return (
         <Container>
             <HashtagIcon />
@@ -16,5 +16,4 @@ const ChannelInfo: React.FC = () => {
     ) 
 };
 
-export default ChannelInfo;
 

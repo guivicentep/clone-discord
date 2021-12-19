@@ -3,7 +3,7 @@ import ChannelMessage, { Mention } from '../ChannelMessage';
 
 import { Container, Messages, InputWrapper, Input, InputIcon } from './styles';
 
-const ChannelData: React.FC = () => {
+export default function ChannelData() {
     const messagesRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 
     useEffect(() => {
@@ -44,5 +44,4 @@ const ChannelData: React.FC = () => {
     ) 
 };
 
-export default ChannelData;
 

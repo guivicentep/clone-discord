@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Profile, Avatar, UserData, Icons, MicIcon, HeadphoneIcon, SettingsIcon} from './styles';
 
-const UserInfo: React.FC = () => {
+export default function UserInfo() {
     return (
         <Container>
             <Profile>
@@ -21,6 +21,3 @@ const UserInfo: React.FC = () => {
         </Container>
     ) 
 };
-
-export default UserInfo;
-
